@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  mssql:
+    container_name: mssql
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 1401:1433
+    volumes:
+      - my-db:/var/lib/mssqlql/data
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=mssql1Ipw
+      - MSSQL_PID=Express
+  redis:
+    container_name: redis
+    image: redis
+    command: redis-server --requirepass Redis2022!
+    ports:
+      - "6379:6379"
+volumes:
+  my-db: {}
+  my-db-hang-fire: {}

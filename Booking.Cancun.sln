@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Solution Itens", "0 - Solution Itens", "{9017241A-4F2D-4173-AC8E-22E2909F0C66}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Pecege\Pay\Api\.gitignore = ..\..\Pecege\Pay\Api\.gitignore
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{6D8570AF-C5FB-4046-AFC7-0139CBCF8D34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{977A8117-5F8D-4947-8F46-6A4C2071FEA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{8D5CC16E-EF9E-4543-AD84-176ADF6D1B55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infraestructure", "4 - Infraestructure", "{BCB06A3F-DD44-44F9-B303-29EA12DBDB62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{C20884E5-69F8-4FE1-B5AB-1CD580B77436}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Cancun.WebApi", "src\Booking.Cancun.WebApi\Booking.Cancun.WebApi.csproj", "{A9A203B3-5886-4DDE-BA73-EA6306732C84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Cancun.Infraestructure.CrossCutting", "src\Booking.Cancun.CrossCutting\Booking.Cancun.Infraestructure.CrossCutting.csproj", "{4FA2F6C5-0D11-4BAA-92C7-8E2AB07F474E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Cancun.Domain", "src\Booking.Cancun.Domain\Booking.Cancun.Domain.csproj", "{9952392E-A516-4CAA-A34F-C2315F736C21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Cancun.Infraestructure.Data.MsSql", "src\Booking.Cancun.Infraestructure.Data.MsSql\Booking.Cancun.Infraestructure.Data.MsSql.csproj", "{853A3607-00F6-43F4-8990-DD1CF20221FB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Cancun.Application", "src\Booking.Cancun.Application\Booking.Cancun.Application.csproj", "{8489AEC7-3242-467F-B9E8-0CEF16DA708F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9A203B3-5886-4DDE-BA73-EA6306732C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A203B3-5886-4DDE-BA73-EA6306732C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A203B3-5886-4DDE-BA73-EA6306732C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A203B3-5886-4DDE-BA73-EA6306732C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA2F6C5-0D11-4BAA-92C7-8E2AB07F474E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA2F6C5-0D11-4BAA-92C7-8E2AB07F474E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA2F6C5-0D11-4BAA-92C7-8E2AB07F474E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA2F6C5-0D11-4BAA-92C7-8E2AB07F474E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9952392E-A516-4CAA-A34F-C2315F736C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9952392E-A516-4CAA-A34F-C2315F736C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9952392E-A516-4CAA-A34F-C2315F736C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9952392E-A516-4CAA-A34F-C2315F736C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853A3607-00F6-43F4-8990-DD1CF20221FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853A3607-00F6-43F4-8990-DD1CF20221FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853A3607-00F6-43F4-8990-DD1CF20221FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853A3607-00F6-43F4-8990-DD1CF20221FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8489AEC7-3242-467F-B9E8-0CEF16DA708F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8489AEC7-3242-467F-B9E8-0CEF16DA708F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8489AEC7-3242-467F-B9E8-0CEF16DA708F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8489AEC7-3242-467F-B9E8-0CEF16DA708F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A9A203B3-5886-4DDE-BA73-EA6306732C84} = {6D8570AF-C5FB-4046-AFC7-0139CBCF8D34}
+		{4FA2F6C5-0D11-4BAA-92C7-8E2AB07F474E} = {BCB06A3F-DD44-44F9-B303-29EA12DBDB62}
+		{9952392E-A516-4CAA-A34F-C2315F736C21} = {8D5CC16E-EF9E-4543-AD84-176ADF6D1B55}
+		{853A3607-00F6-43F4-8990-DD1CF20221FB} = {BCB06A3F-DD44-44F9-B303-29EA12DBDB62}
+		{8489AEC7-3242-467F-B9E8-0CEF16DA708F} = {977A8117-5F8D-4947-8F46-6A4C2071FEA7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00279437-8B09-4175-B0FB-4D4E1692706F}
+	EndGlobalSection
+EndGlobal

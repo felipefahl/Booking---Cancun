@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="1.9.2" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.31" />
+    <PackageReference Include="Hangfire.Core" Version="1.7.31" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Serilog" Version="2.11.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.6.66" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Booking.Cancun.Domain\Booking.Cancun.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
