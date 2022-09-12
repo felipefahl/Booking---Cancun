@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Booking.Cancun.Domain.Logging;
+using Microsoft.Extensions.Logging;
 
 namespace Booking.Cancun.CrossCutting.Logging;
 

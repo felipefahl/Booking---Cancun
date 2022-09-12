@@ -1,4 +1,5 @@
 ﻿using Booking.Cancun.CrossCutting.Logging;
+using Booking.Cancun.Domain.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.CodeAnalysis;
 

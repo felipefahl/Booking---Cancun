@@ -53,7 +53,9 @@ public class Startup : IPecegePayStartup
 
         services.AddDependencyInjection();
 
-        services.AddHangfire(Configuration);
+        services.AddCapLibrary(Configuration);
+
+        services.AddEmailSender(Configuration);
 
         // Add framework services.
         services.AddMvc();
@@ -88,7 +90,7 @@ public class Startup : IPecegePayStartup
                 endpoints.MapControllers()
         );
 
-        app.UseHangfireSetup(Configuration);
+        //app.UseHangfireSetup(Configuration);
 
         app.UseSwaggerSetup(provider);
 

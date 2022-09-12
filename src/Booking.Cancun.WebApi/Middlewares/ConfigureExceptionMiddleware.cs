@@ -1,6 +1,6 @@
-﻿using Booking.Cancun.CrossCutting.Logging;
-using Booking.Cancun.Domain.Dtos.Response;
+﻿using Booking.Cancun.Domain.Dtos.Response;
 using Booking.Cancun.Domain.Exceptions;
+using Booking.Cancun.Domain.Logging;
 using System.Net;
 using System.Text.Json;
 

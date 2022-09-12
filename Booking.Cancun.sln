@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Solution Itens", "0 - Solution Itens", "{9017241A-4F2D-4173-AC8E-22E2909F0C66}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Pecege\Pay\Api\.gitignore = ..\..\Pecege\Pay\Api\.gitignore
+		.gitignore = .gitignore
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject

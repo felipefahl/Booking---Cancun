@@ -1,4 +1,4 @@
-﻿namespace Booking.Cancun.CrossCutting.Logging;
+﻿namespace Booking.Cancun.Domain.Logging;
 
 public interface ILoggerManager
 {

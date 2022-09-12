@@ -8,10 +8,16 @@ namespace Booking.Cancun.WebApi.Controllers;
 public class BookingsController : ApiBaseController
 {
     private readonly IBookingOrderCreate _bookingOrderCreate;
+    private readonly IBookingOrderUpdate _bookingOrderUpdate;
+    private readonly IBookingOrderCancel _bookingOrderCancel;
 
-    public BookingsController(IBookingOrderCreate bookingOrderCreate)
+    public BookingsController(IBookingOrderCreate bookingOrderCreate,
+        IBookingOrderUpdate bookingOrderUpdate,
+        IBookingOrderCancel bookingOrderCancel)
     {
         _bookingOrderCreate = bookingOrderCreate;
+        _bookingOrderUpdate = bookingOrderUpdate;
+        _bookingOrderCancel = bookingOrderCancel;
     }
 
     [HttpPost]
@@ -22,9 +28,19 @@ public class BookingsController : ApiBaseController
         return Ok(result);
     }
 
-    [HttpGet]
-    public async Task<IActionResult> Get()
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update([FromRoute] Guid id,[FromBody] BookingOrderRequestDTO request)
     {
-        return Ok("GET");
+        await _bookingOrderUpdate.UpdateBookingOrder(id, request);
+
+        return Ok();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete([FromRoute] Guid id)
+    {
+        await _bookingOrderCancel.CancelBookingOrder(id);
+
+        return Ok();
     }
 }

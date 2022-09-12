@@ -2,7 +2,7 @@
 
 namespace Booking.Cancun.Domain.Interfaces.Jobs;
 
-public interface IRequestedBookingOrderJob
+public interface IBookingNotificationJob
 {
     Task Send(BookingOrderDomain bookingOrderDomain);
 }

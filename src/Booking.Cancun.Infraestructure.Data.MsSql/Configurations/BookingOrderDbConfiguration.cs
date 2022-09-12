@@ -11,7 +11,7 @@ public class BookingOrderDbConfiguration : IEntityTypeConfiguration<BookingOrder
     {
         builder.HasKey(x => x.Id);
 
-        builder.Property(c => c.CreatedAt)
+        builder.Property(c => c.BookedAt)
             .IsRequired();
 
         builder.Property(c => c.StartDate)

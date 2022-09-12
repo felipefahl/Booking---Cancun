@@ -1,4 +1,5 @@
 ﻿using Booking.Cancun.Domain.Interfaces.Repository;
+using Booking.Cancun.Infraestructure.Data.MsSql.Mappings;
 using Booking.Cancun.Infraestructure.Data.MsSql.Repository;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.CodeAnalysis;
@@ -11,5 +12,7 @@ public static class RegisterDependencySetup
     public static void AddDataMsSqlDependencyInjection(this IServiceCollection services)
     {
         services.AddScoped<IBookingOrderRepository, BookingOrderRepository>();
+
+        services.AddAutoMapper(typeof(GeneralProfileData));
     }
 }

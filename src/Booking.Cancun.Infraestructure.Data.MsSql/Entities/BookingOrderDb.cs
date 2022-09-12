@@ -6,8 +6,7 @@ namespace Booking.Cancun.Infraestructure.Data.MsSql.Entities;
 public class BookingOrderDb
 {
     public Guid Id { get; private set; }
-    public DateTime CreatedAt { get; private set; }
-    public DateTime? UpdatedAt { get; private set; }
+    public DateTime BookedAt { get; private set; }
     public DateTime StartDate { get; private set; }
     public DateTime EndDate { get; private set; }
     public int RoomNumber { get; private set; }
@@ -23,7 +22,7 @@ public class BookingOrderDb
     public BookingOrderDb(BookingOrderDomain bookingOrderDomain)
     {
         Id = bookingOrderDomain.Id;
-        CreatedAt = DateTime.Now;
+        BookedAt = DateTime.Now;
         StartDate = bookingOrderDomain.StartDate;
         EndDate = bookingOrderDomain.EndDate;
         RoomNumber = bookingOrderDomain.RoomNumber; 
@@ -32,13 +31,6 @@ public class BookingOrderDb
 
         Stays = new List<BookingOrderStayDb>();
     }
-
-    //public void Update(BookingOrderDomain bookingOrderDomain)
-    //{
-    //    UpdatedAt = DateTime.Now;
-    //    StartDate = bookingOrderDomain.StartDate;
-    //    EndDate = bookingOrderDomain.EndDate;
-    //}
 
     public override bool Equals(object? obj)
     {

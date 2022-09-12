@@ -1,5 +1,5 @@
-﻿using Booking.Cancun.CrossCutting.Logging;
-using Booking.Cancun.Domain.Interfaces.Cache;
+﻿using Booking.Cancun.Domain.Interfaces.Cache;
+using Booking.Cancun.Domain.Logging;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 

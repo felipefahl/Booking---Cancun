@@ -1,5 +1,5 @@
-﻿using Booking.Cancun.CrossCutting.Logging;
-using Booking.Cancun.Domain.Interfaces.Cache;
+﻿using Booking.Cancun.Domain.Interfaces.Cache;
+using Booking.Cancun.Domain.Logging;
 using Booking.Cancun.Infraestructure.CrossCutting.Cache;
 
 namespace Booking.Cancun.WebApi.Configurations;

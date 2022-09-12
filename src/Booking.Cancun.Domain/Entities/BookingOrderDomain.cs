@@ -30,10 +30,13 @@ public class BookingOrderDomain
     [JsonProperty]
     public IList<BookingOrderStayDomain> Stays { get; private set; }
 
+    public IReadOnlyList<BookingOrderStayDomain> OldStays { get; private set; }
+
     [JsonConstructor]
     private BookingOrderDomain()
     {
         Stays = new List<BookingOrderStayDomain>();
+        OldStays = new List<BookingOrderStayDomain>();
     }
 
     public BookingOrderDomain(BookingOrderRequestDTO bookingOrderRequest)
@@ -50,9 +53,23 @@ public class BookingOrderDomain
         CheckCreateContract();
     }
 
+    public void Update(BookingOrderRequestDTO bookingOrderRequest)
+    {
+        Email = bookingOrderRequest.Email;
+        StartDate = bookingOrderRequest.StartDate.Date;
+        EndDate = bookingOrderRequest.EndDate.Date;
+
+        CheckCreateContract();
+    }
+
     public void Booked()
     {
         Status = EBookingOrderStatus.Booked;
+    }
+
+    public void Updated()
+    {
+        Status = EBookingOrderStatus.Updated;
     }
 
     public void Denied()
@@ -60,8 +77,23 @@ public class BookingOrderDomain
         Status = EBookingOrderStatus.Denied;
     }
 
+    public void UpdateDenied()
+    {
+        Status = EBookingOrderStatus.UpdateDenied;
+    }
+
+    public void Cancelled()
+    {
+        Status = EBookingOrderStatus.Cancelled;
+
+        OldStays = Stays.Select(x => x).ToList();
+        Stays = new List<BookingOrderStayDomain>();
+    }
+
     public void GenerateStays()
     {
+        OldStays = Stays.Select(x => x).ToList();
+        Stays = new List<BookingOrderStayDomain>();
         for (var date = StartDate.Date; date.Date <= EndDate.Date; date = date.AddDays(1))
         {
             Stays.Add(new BookingOrderStayDomain(Id, date));

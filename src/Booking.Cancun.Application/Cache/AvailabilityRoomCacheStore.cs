@@ -20,18 +20,7 @@ public class AvailabilityRoomCacheStore : IAvailabilityRoomRepository
         if (cached != null)
             return cached.AvailabilityList;
 
-        var newAvailability = new List<AvailabilityRoomDomain>();
-
-        for (DateTime date = DateTime.Today; date <= DateTime.Today.AddDays(30); date = date.AddDays(1))
-        {
-            bool available = true;
-            newAvailability.Add(new AvailabilityRoomDomain(roomNumber, date, available));
-        }
-        await _cacheStore.Add(new AvailabilityRoomCache(newAvailability),
-                                  new AvailabilityRoomCacheKey(roomNumber),
-                                  expirationTime: null);
-
-        return newAvailability;
+        return new List<AvailabilityRoomDomain>();
 
     }
 
@@ -41,21 +30,8 @@ public class AvailabilityRoomCacheStore : IAvailabilityRoomRepository
         {
             var roomNumber = roomGroup.Key;
             var roomGroupList = roomGroup.ToList();
-            var oldAvailability = AllByRoomAsync(roomNumber).Result;
-            var newAvailability = new List<AvailabilityRoomDomain>();
 
-            for (DateTime date = DateTime.Today; date <= DateTime.Today.AddDays(30); date = date.AddDays(1))
-            {
-                bool available = oldAvailability
-                    .Union(roomGroupList)
-                    .Where(x => x.Date.Date == date)
-                    .Where(x => x.RoomNumber == roomNumber)
-                    .All(x => x.Available);
-
-                newAvailability.Add(new AvailabilityRoomDomain(roomNumber, date, available));
-            }
-
-            _cacheStore.Add(new AvailabilityRoomCache(newAvailability),
+            _cacheStore.Add(new AvailabilityRoomCache(roomGroupList),
                                       new AvailabilityRoomCacheKey(roomGroup.Key),
                                       expirationTime: null).Wait();
         }

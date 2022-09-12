@@ -2,8 +2,10 @@
 
 public enum EBookingOrderStatus
 {
-    Requested,
-    Booked,
-    Denied,
-    Cancelled
+    Requested = 0,
+    Booked = 1,
+    Denied = 2,
+    Cancelled = 3,
+    Updated = 4,
+    UpdateDenied = 5,
 }
