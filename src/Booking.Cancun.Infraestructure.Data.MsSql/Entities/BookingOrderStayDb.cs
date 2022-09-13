@@ -15,7 +15,7 @@ public class BookingOrderStayDb
 
     }
 
-    internal BookingOrderStayDb(BookingOrderStayDomain bookingOrderStayDomain)
+    public BookingOrderStayDb(BookingOrderStayDomain bookingOrderStayDomain)
     {
         BookingOrderId = bookingOrderStayDomain.BookingOrderId;
 

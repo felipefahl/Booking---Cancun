@@ -10,7 +10,7 @@ internal class BookingOrderDomainCreateContract : AbstractValidator<BookingOrder
             .NotNull().WithMessage("Is Required")
             .NotEmpty().WithMessage("Is Required")
             .GreaterThan(DateTime.Today).WithMessage("Should be in future")
-            .LessThan(DateTime.Today.AddDays(30))
+            .LessThanOrEqualTo(DateTime.Today.AddDays(30))
                 .WithMessage("Should be in the next 30 days");
 
         RuleFor(c => c.EndDate)
@@ -18,9 +18,9 @@ internal class BookingOrderDomainCreateContract : AbstractValidator<BookingOrder
             .NotEmpty().WithMessage("Is Required")
             .GreaterThan(DateTime.Today).WithMessage("Should be in future")
             .GreaterThanOrEqualTo(p => p.StartDate).WithMessage("Should be greater or equal than StartDate")
-            .LessThanOrEqualTo(p => p.StartDate.AddDays(3))
+            .LessThan(p => p.StartDate.AddDays(3))
                 .WithMessage("Should not stay more than 3 days")
-            .LessThan(DateTime.Today.AddDays(30))
+            .LessThanOrEqualTo(DateTime.Today.AddDays(30))
                 .WithMessage("Should be in the next 30 days");
 
         RuleFor(c => c.Email)

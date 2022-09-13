@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Solution Itens", "0 - S
 		.gitignore = .gitignore
 		docker-compose.yml = docker-compose.yml
 		Dockerfile = Dockerfile
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{6D8570AF-C5FB-4046-AFC7-0139CBCF8D34}"
@@ -29,6 +30,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Cancun.Infraestructure.Data.MsSql", "src\Booking.Cancun.Infraestructure.Data.MsSql\Booking.Cancun.Infraestructure.Data.MsSql.csproj", "{853A3607-00F6-43F4-8990-DD1CF20221FB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Cancun.Application", "src\Booking.Cancun.Application\Booking.Cancun.Application.csproj", "{8489AEC7-3242-467F-B9E8-0CEF16DA708F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Cancun.UnitTests", "tests\Booking.Cancun.UnitTests\Booking.Cancun.UnitTests.csproj", "{4FA3FBFA-8BB1-4295-B249-C668044C69DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +59,10 @@ Global
 		{8489AEC7-3242-467F-B9E8-0CEF16DA708F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8489AEC7-3242-467F-B9E8-0CEF16DA708F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8489AEC7-3242-467F-B9E8-0CEF16DA708F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA3FBFA-8BB1-4295-B249-C668044C69DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA3FBFA-8BB1-4295-B249-C668044C69DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA3FBFA-8BB1-4295-B249-C668044C69DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA3FBFA-8BB1-4295-B249-C668044C69DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +73,7 @@ Global
 		{9952392E-A516-4CAA-A34F-C2315F736C21} = {8D5CC16E-EF9E-4543-AD84-176ADF6D1B55}
 		{853A3607-00F6-43F4-8990-DD1CF20221FB} = {BCB06A3F-DD44-44F9-B303-29EA12DBDB62}
 		{8489AEC7-3242-467F-B9E8-0CEF16DA708F} = {977A8117-5F8D-4947-8F46-6A4C2071FEA7}
+		{4FA3FBFA-8BB1-4295-B249-C668044C69DC} = {C20884E5-69F8-4FE1-B5AB-1CD580B77436}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {00279437-8B09-4175-B0FB-4D4E1692706F}
