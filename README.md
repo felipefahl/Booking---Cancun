@@ -41,7 +41,7 @@ $ docker-compose down
 
 Once the project is up and running you can access the following URLs:
 
-- [Booking Cancun API Documentation](https://localhost:80/index.html)
+- [Booking Cancun API Documentation](http://localhost:8090/index.html)
 
 ---
 

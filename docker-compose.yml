@@ -1,17 +1,26 @@
 version: '3.9'
 services:
+  myapp:
+    build: .
+    container_name: app
+    depends_on:
+        - mssql
+        - kafka
+        - zookeeper
+        - redis
+    ports:
+      - 8090:80
+      - 44390:443
   zookeeper:
+    container_name: zookeeper
     image: confluentinc/cp-zookeeper:latest
-    networks: 
-      - net
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
 
   kafka:
+    container_name: kafka
     image: confluentinc/cp-kafka:latest
-    networks: 
-      - net
     depends_on:
       - zookeeper
     ports:
@@ -27,7 +36,7 @@ services:
     container_name: mssql
     image: mcr.microsoft.com/mssql/server:2022-latest
     ports:
-      - 1401:1433
+      - 1433:1433
     volumes:
       - my-db:/var/lib/mssqlql/data
     environment:
@@ -40,8 +49,5 @@ services:
     command: redis-server --requirepass Redis2022!
     ports:
       - "6379:6379"
-networks: 
-  net:
-    driver: bridge
 volumes:
   my-db: {}
