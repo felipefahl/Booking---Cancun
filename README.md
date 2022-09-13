@@ -60,7 +60,7 @@ To receive a notification, it is necessary to have a email provider or a email s
 
 #### Microsoft SQL database
 
-- Host: *Server=localhost,1401*
+- Host: *Server=localhost,1433*
 - Database: *master*
 - User: *sa*
 - Password: *mssql1Ipw;*
